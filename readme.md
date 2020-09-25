@@ -1,6 +1,10 @@
 // protocol buffers version 
 syntax = "proto3"; //proto1 / proto2 / proto3
 
+import "<folder_name>/<file_name>"
+import "go-protocol-buffers/example.proto"
+
+package "<name>"
 
 message MessageName {
     int32 id = 1;   // [type] [name] = [order];
@@ -23,5 +27,8 @@ message MessageName {
     }
 
     EyeColor eye_color = 8;
-}
 
+    ... <package>.<type> <name> = <order> //eg.
+    my.package.Date date = 9;
+    
+}
